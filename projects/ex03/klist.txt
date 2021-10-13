@@ -1,0 +1,5 @@
+Credentials cache: API:0CCB08FB-13BE-4F2B-BD07-01289470F391
+        Principal: afindo@42ROMA.IT
+
+  Issued                Expires               Principal
+Sep 29 08:32:35 2021  Sep 29 18:32:28 2021  krbtgt/42ROMA.IT@42ROMA.IT
