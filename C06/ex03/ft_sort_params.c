@@ -6,7 +6,7 @@
 /*   By: afindo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 15:02:45 by afindo            #+#    #+#             */
-/*   Updated: 2021/10/12 22:06:02 by afindo           ###   ########.fr       */
+/*   Updated: 2021/10/14 15:45:54 by afindo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,15 @@
 
 void	ft_putstr(char *str)
 {
-	char	string;
+	int	i;
 
-	string = str;
-	while (string != 0)
+	i = 0;
+	while (str[i] != 0)
 	{
-		write(1, string, 1);
-		string++;
+		write(1, &str[i], 1);
+		i++;
 	}
 	write(1, "\n", 1);
-	return ;
 }
 
 int	ft_strcmp(char *s1, char *s2)

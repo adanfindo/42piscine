@@ -1,37 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_params.c                                    :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afindo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/12 14:22:19 by afindo            #+#    #+#             */
-/*   Updated: 2021/10/13 16:10:42 by afindo           ###   ########.fr       */
+/*   Created: 2021/10/14 10:55:43 by afindo            #+#    #+#             */
+/*   Updated: 2021/10/14 11:21:36 by afindo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdlib.h>
 
-int	main(int argc, char **argv)
+char	*ft_strdup(char *src)
 {
+	char	*c;
 	int		i;
-	int		j;
-	char	c;
+	int		len;
 
-	i = argc - 1;
-	if (argc < 2)
-		return (0);
-	while (i > 0)
-	{
-		j = 0;
-		while (argv[i][j] != '\0')
-		{
-			c = argv[i][j];
-			write(1, &c, 1);
-			j++;
-		}
-		write(1, "\n", 1);
-		i--;
-	}
-	return (0);
+	len = 0;
+	i = -1;
+	while (src[++i] != '\0')
+		len++;
+	c = (char *)malloc(sizeof(char) * len + 1);
+	i = -1;
+	while (src[++i] != '\0')
+		c[i] = src[i];
+	c[i] = '\0';
+	return (c);
 }
